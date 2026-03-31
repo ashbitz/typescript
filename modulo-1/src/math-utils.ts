@@ -30,4 +30,12 @@ export function calcularMediana(array: number[]): number | null {
     } else {
         return arrayOrdenado[(cantidadNumeros -1 ) / 2];
     }    
+}
+
+// FUNCION FILTRAR ATIPICOS
+export function filtrarAtipicos(array: number[], limite: number): number [] {
+
+    // Filtrar array para eliminar números atípicos (mayores a 50 o menores a -50)
+    // Math.abs() devuelve el valor absoluto sin signo, convirtiendo los negativos en postivios
+    return array.filter((numero) => Math.abs(numero) <= limite);
 };

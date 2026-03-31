@@ -1,5 +1,6 @@
 import { calcularMedia } from "./math-utils";
 import { calcularMediana } from "./math-utils";
+import { filtrarAtipicos } from "./math-utils";
 
 //PRUEBA FUNCION CALCULAR MEDIA
 
@@ -17,3 +18,10 @@ console.log(`La mediana de los datos es: ${resultadoMediana}`);
 const datosMedianaDos = [10, 20, 30, 40];
 const resultadoMedianaDos = calcularMediana(datosMedianaDos);
 console.log(`La mediana de los datos es: ${resultadoMedianaDos}`);
+
+// PRUEBA FUNCION FILTRAR ATIPICOS
+
+const datosAtipicos = [10, 20, 30, -60, 70, 40, -90, 100];
+const limiteAtipicos = 50;
+const resultadoAtipicos = filtrarAtipicos(datosAtipicos, limiteAtipicos);
+console.log(`Los datos sin atípicos son: ${resultadoAtipicos}`);
