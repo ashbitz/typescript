@@ -12,6 +12,7 @@ export function generarReporte(estado: EstadoMatricula): string {
       return `Matrícula finalizada con nota media de ${estado.notaMedia}.`;
 
     default:
-      return "Estado de matrícula no reconocido.";
+      const comprobacionExhaustiva: never = estado;
+      throw new Error(`Estado de matrícula desconocido: ${comprobacionExhaustiva}`);
   }
 }
